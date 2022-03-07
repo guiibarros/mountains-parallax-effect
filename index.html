@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scroll Effect</title>
+
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="banner">
+      <div class="layers">
+        <img id="layer-6" src="./assets/sky_fc.png" alt="Sky">
+        <img id="layer-5" src="./assets/far_mountains_fc.png" alt="Mountains">
+        <img id="layer-4" src="./assets/grassy_mountains_fc.png" alt="Grassy Mountains">
+        <img id="layer-3" src="./assets/clouds_mid_t_fc.png" alt="Clouds Mid">
+        <img id="layer-2" src="./assets/hill.png" alt="Hill">
+        <img id="layer-1" src="./assets/clouds_front_t_fc.png" alt="Front Clouds">
+      </div> <!-- Layers -->
+
+      <div class="title">
+        <section class="scroll-down">
+          <h1>Parallax effect</h1>
+          <p>Scroll down!</p>
+        </section>
+        <section class="scroll-up">
+          <h1>Parallax effect</h1>
+          <p>Scroll up!</p>
+        </section>
+      </div> <!-- Title -->
+    </header> <!-- Banner -->
+    <script>
+      window.onload = () => {
+        // Get all layers by id
+        const layer1 = document.getElementById('layer-1');
+        const layer2 = document.getElementById('layer-2');
+        const layer3 = document.getElementById('layer-3');
+        const layer4 = document.getElementById('layer-4');
+        const layer5 = document.getElementById('layer-5');
+        const layer6 = document.getElementById('layer-6');
+
+        const title = document.querySelector('.title');
+
+        // Parallax effect logic
+        document.onscroll = () => {
+          layer1.style.bottom = `-${window.pageYOffset / 10}px`;
+          layer2.style.bottom = `-${window.pageYOffset / 4}px`;
+          layer3.style.bottom = `-${window.pageYOffset / 3}px`;
+          layer4.style.bottom = `-${window.pageYOffset / 2}px`;
+          layer5.style.bottom = `-${window.pageYOffset / 1.5}px`;
+          layer6.style.bottom = `-${window.pageYOffset / 1.5}px`;
+          title.style.left = `-${window.pageYOffset / 1.5}px`;
+        };
+      };
+    </script>
+  </body>
+</html>
