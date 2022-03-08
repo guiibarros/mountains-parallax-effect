@@ -1,4 +1,4 @@
-<img src="./.github/Grassy_Mountains-cover.png" width= "100%">
+![Preview gif](./.github/grassy-mountains.gif)
 
 # Grassy mountains parallax
 
@@ -10,7 +10,6 @@ Grassy mountains parallax effect on scroll down and up, <br>created with HTML, C
 - [Itch.io](https://vnitti.itch.io/)
 - [Patreon](https://patreon.com/vnitti)
 - [Portfolio](https://deviantart.com/vnitti)
-
 
 ## Assets License
 
